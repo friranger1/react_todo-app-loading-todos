@@ -10,21 +10,9 @@ import { Main } from './components/main/Main';
 // eslint-disable-next-line max-len
 import { ErrorNotification } from './components/errorNotification/ErrorNotification';
 import { Header } from './components/header/Header';
+import { testArr } from './api/mocks/testAPI';
 
-const testArr: Todo[] = [
-{
-  id: 74,
-  userId: 4,
-  title: 'expedita tempore nobis eveniet laborum maiores',
-  completed: false,
-},
-{
-  id: 74,
-  userId: 4,
-  title: '123',
-  completed: true,
-},
-];
+
 
 export const App: React.FC = () => {
   const [toDos, setTodos] = useState<Todo[]>([]);

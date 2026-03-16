@@ -20,7 +20,6 @@ export const Footer: React.FC<Props> = ({
   return (
     <footer className="todoapp__footer" data-cy="Footer">
       <span className="todo-count" data-cy="TodosCounter">
-        {/* Используем пропс activeCount вместо прямого фильтра toDos */}
         {activeCount} items left
       </span>
 
