@@ -10,7 +10,6 @@ import { Main } from './components/main/Main';
 // eslint-disable-next-line max-len
 import { ErrorNotification } from './components/errorNotification/ErrorNotification';
 import { Header } from './components/header/Header';
-import { testArr } from './api/mocks/testAPI';
 
 export const App: React.FC = () => {
   const [toDos, setTodos] = useState<Todo[]>([]);
@@ -40,11 +39,7 @@ export const App: React.FC = () => {
     setError(null);
     getTodos()
       .then(data => {
-        if (data.length === 0) {
-          setTodos(testArr);
-        } else {
-          setTodos(data);
-        }
+        setTodos(data);
       })
       .catch(() => showError('Unable to load todos'));
   }, []);
