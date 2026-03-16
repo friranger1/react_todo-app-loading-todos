@@ -12,8 +12,6 @@ import { ErrorNotification } from './components/errorNotification/ErrorNotificat
 import { Header } from './components/header/Header';
 import { testArr } from './api/mocks/testAPI';
 
-
-
 export const App: React.FC = () => {
   const [toDos, setTodos] = useState<Todo[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -42,7 +40,6 @@ export const App: React.FC = () => {
     setError(null);
     getTodos()
       .then(data => {
-        // setTodos(data);
         if (data.length === 0) {
           setTodos(testArr);
         } else {

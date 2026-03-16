@@ -9,7 +9,6 @@ type Props = {
 export const Header: React.FC<Props> = ({ isAllCompleted, toDosCount }) => {
   return (
     <header className="todoapp__header">
-      {/* this button should have `active` class only if all todos are completed */}
       {toDosCount > 0 && (
         <button
           type="button"
@@ -18,7 +17,6 @@ export const Header: React.FC<Props> = ({ isAllCompleted, toDosCount }) => {
         />
       )}
 
-      {/* Add a todo on form submit */}
       <form>
         <input
           data-cy="NewTodoField"
